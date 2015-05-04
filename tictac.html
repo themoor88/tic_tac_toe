@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="ticstylesheet.css"></link>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td id="one"></td>
+      <td id="two"></td>
+      <td id ="three"></td>
+    </tr>
+
+     <tr>
+      <td id="four"></td>
+      <td id="five"></td>
+      <td id="six"></td>
+    </tr>
+
+     <tr>
+      <td id="seven"></td>
+      <td id="eight"></td>
+      <td id="nine"></td>
+    </tr>
+  </table>
+  <script src="jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+
+    var count = 0;
+    $('td').on('click', function(){
+      if (count % 2 === 0){
+        $(this).append('<img src="http://www.gconmedia.com/images/64010/winnie_the_pooh_para_tutorial_n__n_by_omgiscaata-d4tps6b.png" width=70% height=90%>').addClass('x');
+        $(this).off();
+      }
+      else{
+        $(this).append('<img src="https://s-media-cache-ak0.pinimg.com/236x/05/09/23/0509231b0f33d1bdaef1432ef096c8ad.jpg" width=90% height=90%>').addClass('o');
+        $(this).off();
+      }
+      count++;
+    });
+
+    function winOrLose() {
+      if ($('#one').hasClass('x') && $('#two').hasClass('x')){
+        alert('Congratulations. X has won.');
+      }
+    }
+    winOrLose();
+
+  });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
